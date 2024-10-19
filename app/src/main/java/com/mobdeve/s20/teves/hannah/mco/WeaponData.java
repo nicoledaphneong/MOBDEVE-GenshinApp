@@ -52,7 +52,7 @@ public class WeaponData {
         aetherRefineRequirements.put("Weapon Material 1", 2);
         aetherRefineRequirements.put("Weapon Material 2", 3);
 
-        weaponList.add(new WeaponData("Sword", R.drawable.sample_weapon,
+        weaponList.add(new WeaponData("Primordial Jade Wing Spear", R.drawable.primordial,
                 aetherRefineRequirements, 10000, 2000));
 
         // Sample data for Character 2
@@ -62,7 +62,7 @@ public class WeaponData {
         character2RefineRequirements.put("Weapon Material 1", 1);
         character2RefineRequirements.put("Weapon Material 2", 2);
 
-        weaponList.add(new WeaponData("Bow", R.drawable.sample_weapon,
+        weaponList.add(new WeaponData("Amos Bow", R.drawable.amos,
                 character2RefineRequirements, 8000, 1500));
 
         // Sample data for Character 3
@@ -72,7 +72,7 @@ public class WeaponData {
         character3RefineRequirements.put("Weapon Material 1", 2);
         character3RefineRequirements.put("Weapon Material 2", 1);
 
-        weaponList.add(new WeaponData("Polearm", R.drawable.sample_weapon,
+        weaponList.add(new WeaponData("Staff of Homa", R.drawable.homa,
                 character3RefineRequirements, 9000, 1800));
 
         return weaponList;

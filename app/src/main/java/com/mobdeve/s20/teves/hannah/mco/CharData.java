@@ -103,7 +103,7 @@ public class CharData {
         aetherSkillPrio.add("Skill B");
 
         // Add Aether to character list
-        charList.add(new CharData("Aether", R.drawable.sample_character, aetherAscension, 5000, aetherTalents, 3000,
+        charList.add(new CharData("Xiao", R.drawable.xiao, aetherAscension, 5000, aetherTalents, 3000,
                 aetherBestArtifacts, aetherBestWeapons, aetherSkillPrio));
 
         // Character 2
@@ -141,7 +141,7 @@ public class CharData {
         character2SkillPrio.add("Skill D");
 
         // Add Character 2 to character list
-        charList.add(new CharData("Character 2", R.drawable.sample_character, character2Ascension, 4000, character2Talents, 2500,
+        charList.add(new CharData("Ganyu", R.drawable.ganyu, character2Ascension, 4000, character2Talents, 2500,
                 character2BestArtifacts, character2BestWeapons, character2SkillPrio));
 
         // Character 3
@@ -179,7 +179,7 @@ public class CharData {
         character3SkillPrio.add("Skill F");
 
         // Add Character 3 to character list
-        charList.add(new CharData("Character 3", R.drawable.sample_character, character3Ascension, 4000, character3Talents, 2500,
+        charList.add(new CharData("Hu Tao", R.drawable.hutao, character3Ascension, 4000, character3Talents, 2500,
                 character3BestArtifacts, character3BestWeapons, character3SkillPrio));
 
         return charList;

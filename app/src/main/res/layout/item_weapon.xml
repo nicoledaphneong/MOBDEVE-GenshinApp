@@ -8,11 +8,10 @@
 
     <ImageView
         android:id="@+id/weaponImg"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="15dp"
         android:adjustViewBounds="true"
-        android:scaleType="fitCenter"/>
+        android:scaleType="centerCrop"/>
 
     <TextView
         android:id="@+id/weaponName"
@@ -21,7 +20,7 @@
         android:layout_below="@id/weaponImg"
         android:gravity="center"
         android:textColor="@color/white"
-        android:textSize="18sp"
+        android:textSize="16sp"
         android:textStyle="bold"/>
 
 </RelativeLayout>
