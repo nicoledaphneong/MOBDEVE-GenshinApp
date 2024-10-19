@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
@@ -16,11 +17,13 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.List;
 
 public class HomeFragment extends Fragment {
+    private HomePageAdapter adapter;
+    private List<HomeDailiesData> dailyTasks;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         RecyclerView recyclerView;
-        HomePageAdapter adapter;
+        // HomePageAdapter adapter;
 
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
@@ -31,8 +34,10 @@ public class HomeFragment extends Fragment {
         // Set LayoutManager
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
+        // Initialize the data list
+        dailyTasks = HomeDailiesData.getData();
+
         // Set Adapter with the data
-        List<HomeDailiesData> dailyTasks = HomeDailiesData.getData();
         adapter = new HomePageAdapter(dailyTasks);
         recyclerView.setAdapter(adapter);
 
@@ -56,7 +61,15 @@ public class HomeFragment extends Fragment {
 
         // Set up dialog buttons
         builder.setPositiveButton("Add", (dialog, which) -> {
-            // Handle the positive button click (e.g., add a task)
+            EditText taskNameInput = dialogView.findViewById(R.id.taskNameInput);
+            String taskName = taskNameInput.getText().toString();
+
+            // Add the new task to the list
+            HomeDailiesData.addTask(dailyTasks, "12:30 PM", taskName);
+
+            // Notify the adapter of the data change
+            adapter.notifyDataSetChanged();
+
             Toast.makeText(getContext(), "Task added!", Toast.LENGTH_SHORT).show();
         });
 

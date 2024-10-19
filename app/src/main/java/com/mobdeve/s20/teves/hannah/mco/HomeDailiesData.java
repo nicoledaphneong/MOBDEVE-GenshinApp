@@ -20,4 +20,8 @@ public class HomeDailiesData {
         list.add(new HomeDailiesData("12:30 PM", "Don't forget to use your Resins!"));
         return list;
     }
+
+    public static void addTask(List<HomeDailiesData> list, String time, String task) {
+        list.add(new HomeDailiesData(time, task));
+    }
 }
