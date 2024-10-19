@@ -20,6 +20,17 @@
 
     </androidx.core.widget.NestedScrollView>
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="75dp"
+        android:src="@drawable/ic_add"
+        android:contentDescription="Add task"
+        app:backgroundTint="@android:color/white" />
+
     <!-- Bottom Navigation View stays sticky at the bottom -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
